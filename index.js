@@ -13,13 +13,14 @@ app.get('/', function (req, res) {
 
 app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
+  
 });
 app.get('/api/whoami', function (req, res) {
-  const ipaddress = req.ip;
+  const ip_address = req.ip;
   const language = req.get('Accept-Language');
   const software = req.get('User-Agent');
 
-  res.json({ ipaddress, language, software });
+  res.json({ ip_address, language, software });
 });
 
 // listen for requests :)
